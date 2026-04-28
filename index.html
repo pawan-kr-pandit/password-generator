@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="top-row">
+        <h1>Password Generator</h1>
+        <button id="themeBtn" type="button" class="theme-btn">Light Mode</button>
+      </div>
+
+      <p class="subtitle">
+        Create strong passwords with custom options, live strength, and one-click copy.
+      </p>
+
+      <section class="generator-panel">
+        <div class="length-row">
+          <label for="lengthRange">Password Length</label>
+          <span id="lengthValue" class="length-value">12</span>
+        </div>
+        <input
+          id="lengthRange"
+          class="range-input"
+          type="range"
+          min="6"
+          max="32"
+          value="12"
+        />
+
+        <div class="options-grid">
+          <label class="option-item">
+            <input id="includeUpper" type="checkbox" checked />
+            <span>Uppercase Letters</span>
+          </label>
+          <label class="option-item">
+            <input id="includeLower" type="checkbox" checked />
+            <span>Lowercase Letters</span>
+          </label>
+          <label class="option-item">
+            <input id="includeNumbers" type="checkbox" checked />
+            <span>Numbers</span>
+          </label>
+          <label class="option-item">
+            <input id="includeSymbols" type="checkbox" checked />
+            <span>Symbols</span>
+          </label>
+        </div>
+
+        <button id="generateBtn" type="button" class="generate-btn">
+          Generate Password
+        </button>
+      </section>
+
+      <label for="password">Generated Password</label>
+      <div class="input-wrap">
+        <input
+          id="password"
+          type="text"
+          placeholder="Click generate to create a password"
+          autocomplete="off"
+          readonly
+        />
+        <button id="copyBtn" type="button">Copy</button>
+      </div>
+
+      <p id="messageText" class="message-text">
+        Select your options and generate a secure password.
+      </p>
+
+      <div class="meter">
+        <div id="strengthBar" class="strength-bar"></div>
+      </div>
+      <p id="strengthText" class="strength-text">Strength: --</p>
+      <p id="scoreText" class="score-text">Score: 0%</p>
+
+      <h3>Requirements</h3>
+      <ul id="rulesList" class="rules">
+        <li id="ruleLength">At least 12 characters for stronger security</li>
+        <li id="ruleUpper">Contains uppercase letters</li>
+        <li id="ruleLower">Contains lowercase letters</li>
+        <li id="ruleNumber">Contains numbers</li>
+        <li id="ruleSpecial">Contains special characters</li>
+      </ul>
+
+      <h3>Suggestions</h3>
+      <ul id="suggestions" class="suggestions">
+        <li>Start typing a password to see suggestions.</li>
+      </ul>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
