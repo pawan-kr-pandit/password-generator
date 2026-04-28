@@ -103,6 +103,9 @@ password_generator/
 ├── script.js    # Password generation logic and UI functionality
 └── README.md    # Project documentation
 ```
+## Project Screenshot
+
+![Password Generator Screenshot](./password-generator-screenshot.png)
 
 ---
 
